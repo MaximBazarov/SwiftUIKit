@@ -14,6 +14,9 @@
 		D232A506240A7C15002D49C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D232A505240A7C15002D49C8 /* Assets.xcassets */; };
 		D232A509240A7C15002D49C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D232A507240A7C15002D49C8 /* LaunchScreen.storyboard */; };
 		D232A514240A7C15002D49C8 /* SwiftUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232A513240A7C15002D49C8 /* SwiftUIKitTests.swift */; };
+		D232A520240A7CA8002D49C8 /* ThreeColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232A51F240A7CA8002D49C8 /* ThreeColumns.swift */; };
+		D232A522240A7CFE002D49C8 /* VerticalStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232A521240A7CFE002D49C8 /* VerticalStack.swift */; };
+		D232A524240A7EA2002D49C8 /* Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232A523240A7EA2002D49C8 /* Spacer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		D232A50F240A7C15002D49C8 /* SwiftUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D232A513240A7C15002D49C8 /* SwiftUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIKitTests.swift; sourceTree = "<group>"; };
 		D232A515240A7C15002D49C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D232A51F240A7CA8002D49C8 /* ThreeColumns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeColumns.swift; sourceTree = "<group>"; };
+		D232A521240A7CFE002D49C8 /* VerticalStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStack.swift; sourceTree = "<group>"; };
+		D232A523240A7EA2002D49C8 /* Spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +67,9 @@
 		D232A4F0240A7C14002D49C8 = {
 			isa = PBXGroup;
 			children = (
+				D232A51E240A7C1F002D49C8 /* Sources */,
 				D232A4FB240A7C14002D49C8 /* SwiftUIKit */,
-				D232A512240A7C15002D49C8 /* SwiftUIKitTests */,
+				D232A512240A7C15002D49C8 /* Tests */,
 				D232A4FA240A7C14002D49C8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,13 +97,23 @@
 			path = SwiftUIKit;
 			sourceTree = "<group>";
 		};
-		D232A512240A7C15002D49C8 /* SwiftUIKitTests */ = {
+		D232A512240A7C15002D49C8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				D232A513240A7C15002D49C8 /* SwiftUIKitTests.swift */,
 				D232A515240A7C15002D49C8 /* Info.plist */,
 			);
-			path = SwiftUIKitTests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D232A51E240A7C1F002D49C8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D232A51F240A7CA8002D49C8 /* ThreeColumns.swift */,
+				D232A523240A7EA2002D49C8 /* Spacer.swift */,
+				D232A521240A7CFE002D49C8 /* VerticalStack.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +218,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D232A501240A7C14002D49C8 /* ViewController.swift in Sources */,
+				D232A524240A7EA2002D49C8 /* Spacer.swift in Sources */,
+				D232A522240A7CFE002D49C8 /* VerticalStack.swift in Sources */,
 				D232A4FD240A7C14002D49C8 /* AppDelegate.swift in Sources */,
+				D232A520240A7CA8002D49C8 /* ThreeColumns.swift in Sources */,
 				D232A4FF240A7C14002D49C8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,7 +418,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftUIKitTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -419,7 +439,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftUIKitTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
