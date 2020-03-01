@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  SwiftUIKit
-//
-//  Created by DaBazar on 2/29/20.
-//  Copyright © 2020 DaBazar. All rights reserved.
-//
+
 
 import UIKit
 
@@ -14,16 +8,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         let test = VerticalStack(spacing: 8, [
+            Spacer(),
             ThreeColumns(
                 columnWidth: 24, spacing: 8,
                 left: VerticalStack(spacing: 4, [
-                    view(.black),
-                    view(.green),
+                    MockView(.black),
+                    MockView(.green),
                     Spacer(),
                     ]
                 ),
-                middle: view(.green),
-                right: view(.blue)
+                middle: MockView(.green),
+                right: MockView(.blue)
             ),
             Spacer(),
         ])
@@ -37,12 +32,5 @@ class ViewController: UIViewController {
         ])
     }
 
-
-    private func view(_ color: UIColor) -> UIView {
-        let v = UIView()
-        v.backgroundColor = color
-        v.translatesAutoresizingMaskIntoConstraints = false
-        return v
-    }
 }
 

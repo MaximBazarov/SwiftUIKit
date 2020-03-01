@@ -8,27 +8,32 @@
 
 import XCTest
 @testable import SwiftUIKit
+import SnapshotTesting
 
 class SwiftUIKitTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func test_all() {
+        record = true
+        let sut = VerticalStack(spacing: 8, [
+                   ThreeColumns(
+                       columnWidth: 24, spacing: 8,
+                       left: VerticalStack(spacing: 4, [
+                           MockView(.black),
+                           MockView(.green),
+                           Spacer(),
+                           ]
+                       ),
+                       middle: MockView(.green),
+                       right: MockView(.blue)
+                   ),
+                   Spacer(),
+               ])
+        let wrapper = Wrapper(
+            frame: CGRect(x: 0, y: 0, width: 320, height: 300),
+            containing: sut
+        )
+        assertSnapshot(matching: wrapper, as: .image)
     }
 
 }

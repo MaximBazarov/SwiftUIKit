@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		D232A520240A7CA8002D49C8 /* ThreeColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232A51F240A7CA8002D49C8 /* ThreeColumns.swift */; };
 		D232A522240A7CFE002D49C8 /* VerticalStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232A521240A7CFE002D49C8 /* VerticalStack.swift */; };
 		D232A524240A7EA2002D49C8 /* Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D232A523240A7EA2002D49C8 /* Spacer.swift */; };
+		D2BD3BF7240C4934004677DD /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = D2BD3BF6240C4934004677DD /* SnapshotTesting */; };
+		D2BD3BF9240C49BD004677DD /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD3BF8240C49BD004677DD /* Wrapper.swift */; };
+		D2BD3BFB240C4A6C004677DD /* UIView+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD3BFA240C4A6C004677DD /* UIView+DSL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		D232A51F240A7CA8002D49C8 /* ThreeColumns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeColumns.swift; sourceTree = "<group>"; };
 		D232A521240A7CFE002D49C8 /* VerticalStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStack.swift; sourceTree = "<group>"; };
 		D232A523240A7EA2002D49C8 /* Spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacer.swift; sourceTree = "<group>"; };
+		D2BD3BF8240C49BD004677DD /* Wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
+		D2BD3BFA240C4A6C004677DD /* UIView+DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DSL.swift"; sourceTree = "<group>"; };
+		D2BD3BFC240C4A95004677DD /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2BD3BF7240C4934004677DD /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +107,7 @@
 		D232A512240A7C15002D49C8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				D2BD3BFC240C4A95004677DD /* __Snapshots__ */,
 				D232A513240A7C15002D49C8 /* SwiftUIKitTests.swift */,
 				D232A515240A7C15002D49C8 /* Info.plist */,
 			);
@@ -112,6 +120,8 @@
 				D232A51F240A7CA8002D49C8 /* ThreeColumns.swift */,
 				D232A523240A7EA2002D49C8 /* Spacer.swift */,
 				D232A521240A7CFE002D49C8 /* VerticalStack.swift */,
+				D2BD3BF8240C49BD004677DD /* Wrapper.swift */,
+				D2BD3BFA240C4A6C004677DD /* UIView+DSL.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -150,6 +160,9 @@
 				D232A511240A7C15002D49C8 /* PBXTargetDependency */,
 			);
 			name = SwiftUIKitTests;
+			packageProductDependencies = (
+				D2BD3BF6240C4934004677DD /* SnapshotTesting */,
+			);
 			productName = SwiftUIKitTests;
 			productReference = D232A50F240A7C15002D49C8 /* SwiftUIKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -182,6 +195,9 @@
 				Base,
 			);
 			mainGroup = D232A4F0240A7C14002D49C8;
+			packageReferences = (
+				D2BD3BF5240C4934004677DD /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = D232A4FA240A7C14002D49C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -219,8 +235,10 @@
 			files = (
 				D232A501240A7C14002D49C8 /* ViewController.swift in Sources */,
 				D232A524240A7EA2002D49C8 /* Spacer.swift in Sources */,
+				D2BD3BFB240C4A6C004677DD /* UIView+DSL.swift in Sources */,
 				D232A522240A7CFE002D49C8 /* VerticalStack.swift in Sources */,
 				D232A4FD240A7C14002D49C8 /* AppDelegate.swift in Sources */,
+				D2BD3BF9240C49BD004677DD /* Wrapper.swift in Sources */,
 				D232A520240A7CA8002D49C8 /* ThreeColumns.swift in Sources */,
 				D232A4FF240A7C14002D49C8 /* SceneDelegate.swift in Sources */,
 			);
@@ -485,6 +503,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D2BD3BF5240C4934004677DD /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D2BD3BF6240C4934004677DD /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2BD3BF5240C4934004677DD /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D232A4F1240A7C14002D49C8 /* Project object */;
 }
